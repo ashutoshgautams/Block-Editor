@@ -224,7 +224,7 @@ Each block is designed to be easily customizable:
 
 ## 📄 License
 
-This project is licensed under the GPL v2 or later - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the GPL v2 or later - see the [LICENSE](LICENSE) file for details. -- Coming Soon...
 
 ## 🆘 Support
 
