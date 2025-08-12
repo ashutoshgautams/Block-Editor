@@ -26,7 +26,7 @@
     "course",
     "examples"
   ],
-  "author": "Your Name",
+  "author": "Ashutosh Gautam",
   "license": "GPL-2.0-or-later",
   "devDependencies": {
     "@wordpress/scripts": "^26.19.0",
@@ -57,10 +57,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/your-username/wp-block-editor-course.git"
+    "url": "https://github.com/ashutoshgautam/wp-block-editor-course.git"
   },
   "bugs": {
-    "url": "https://github.com/your-username/wp-block-editor-course/issues"
+    "url": "https://github.com/ashutoshgautam/wp-block-editor-course/issues"
   },
-  "homepage": "https://github.com/your-username/wp-block-editor-course#readme"
+      "homepage": "https://github.com/ashutoshgautam/wp-block-editor-course#readme"
 }
