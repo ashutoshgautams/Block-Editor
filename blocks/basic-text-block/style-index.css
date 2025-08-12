@@ -1,0 +1,286 @@
+/**
+ * Basic Text Block - Frontend Styles
+ * 
+ * These styles are applied on the frontend of the website
+ * 
+ * @package WPBlockEditorCourse
+ * @since 1.0.0
+ */
+
+/* Base block styles */
+.wp-block-basic-text {
+	margin: 0 0 1.5em 0;
+	line-height: 1.6;
+	word-wrap: break-word;
+}
+
+/* Typography sizes */
+.wp-block-basic-text.has-small-font-size {
+	font-size: 13px;
+}
+
+.wp-block-basic-text.has-medium-font-size {
+	font-size: 20px;
+}
+
+.wp-block-basic-text.has-large-font-size {
+	font-size: 36px;
+}
+
+.wp-block-basic-text.has-x-large-font-size {
+	font-size: 42px;
+}
+
+/* Text alignment */
+.wp-block-basic-text.has-text-align-left {
+	text-align: left;
+}
+
+.wp-block-basic-text.has-text-align-center {
+	text-align: center;
+}
+
+.wp-block-basic-text.has-text-align-right {
+	text-align: right;
+}
+
+.wp-block-basic-text.has-text-align-justify {
+	text-align: justify;
+}
+
+/* Drop cap styles */
+.wp-block-basic-text p:first-child::first-letter {
+	display: block;
+	float: left;
+	font-size: 3em;
+	line-height: 0.8;
+	margin: 0.1em 0.1em 0 0;
+	font-weight: bold;
+}
+
+/* Enhanced typography */
+.wp-block-basic-text strong {
+	font-weight: 700;
+}
+
+.wp-block-basic-text em {
+	font-style: italic;
+}
+
+.wp-block-basic-text a {
+	color: #0073aa;
+	text-decoration: underline;
+	transition: color 0.2s ease;
+}
+
+.wp-block-basic-text a:hover {
+	color: #005a87;
+}
+
+.wp-block-basic-text a:focus {
+	outline: 2px solid #0073aa;
+	outline-offset: 2px;
+}
+
+/* Link styles */
+.wp-block-basic-text a:not(.wp-element-button) {
+	text-decoration: underline;
+}
+
+.wp-block-basic-text a:not(.wp-element-button):hover {
+	text-decoration: none;
+}
+
+/* Strikethrough and underline */
+.wp-block-basic-text del {
+	text-decoration: line-through;
+}
+
+.wp-block-basic-text ins {
+	text-decoration: underline;
+}
+
+/* Subscript and superscript */
+.wp-block-basic-text sub {
+	font-size: 0.75em;
+	vertical-align: sub;
+}
+
+.wp-block-basic-text sup {
+	font-size: 0.75em;
+	vertical-align: super;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+	.wp-block-basic-text {
+		font-size: 16px !important; /* Prevent zoom on mobile */
+	}
+	
+	.wp-block-basic-text.has-large-font-size {
+		font-size: 28px;
+	}
+	
+	.wp-block-basic-text.has-x-large-font-size {
+		font-size: 32px;
+	}
+}
+
+@media (max-width: 480px) {
+	.wp-block-basic-text {
+		margin: 0 0 1em 0;
+	}
+	
+	.wp-block-basic-text.has-large-font-size {
+		font-size: 24px;
+	}
+	
+	.wp-block-basic-text.has-x-large-font-size {
+		font-size: 28px;
+	}
+}
+
+/* Print styles */
+@media print {
+	.wp-block-basic-text {
+		font-size: 12pt !important;
+		line-height: 1.4 !important;
+		margin: 0 0 1em 0 !important;
+	}
+	
+	.wp-block-basic-text a {
+		color: #000 !important;
+		text-decoration: underline !important;
+	}
+	
+	.wp-block-basic-text a[href]:after {
+		content: " (" attr(href) ")";
+		font-size: 0.8em;
+		color: #666;
+	}
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+	.wp-block-basic-text {
+		border: 1px solid currentColor;
+		padding: 0.5em;
+	}
+	
+	.wp-block-basic-text a {
+		border-bottom: 2px solid currentColor;
+	}
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+	.wp-block-basic-text * {
+		transition: none !important;
+		animation: none !important;
+	}
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+	.wp-block-basic-text {
+		color: #e1e1e1;
+	}
+	
+	.wp-block-basic-text a {
+		color: #4a9eff;
+	}
+	
+	.wp-block-basic-text a:hover {
+		color: #6bb3ff;
+	}
+}
+
+/* Focus styles for accessibility */
+.wp-block-basic-text:focus-within {
+	outline: 2px solid #0073aa;
+	outline-offset: 2px;
+}
+
+/* Custom class support */
+.wp-block-basic-text.custom-highlight {
+	background: linear-gradient(120deg, #a8edea 0%, #fed6e3 100%);
+	padding: 1rem;
+	border-radius: 8px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.wp-block-basic-text.custom-border {
+	border: 2px solid #0073aa;
+	padding: 1rem;
+	border-radius: 4px;
+}
+
+.wp-block-basic-text.custom-shadow {
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	padding: 1rem;
+	border-radius: 4px;
+}
+
+/* Animation classes */
+.wp-block-basic-text.animate-fade-in {
+	animation: fadeIn 0.5s ease-in;
+}
+
+.wp-block-basic-text.animate-slide-up {
+	animation: slideUp 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes slideUp {
+	from {
+		opacity: 0;
+		transform: translateY(20px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+/* RTL support */
+.rtl .wp-block-basic-text {
+	text-align: right;
+}
+
+.rtl .wp-block-basic-text.has-text-align-left {
+	text-align: right;
+}
+
+.rtl .wp-block-basic-text.has-text-align-right {
+	text-align: left;
+}
+
+.rtl .wp-block-basic-text p:first-child::first-letter {
+	float: right;
+	margin: 0.1em 0 0 0.1em;
+}
+
+/* Performance optimizations */
+.wp-block-basic-text {
+	contain: layout style;
+	will-change: auto;
+}
+
+/* Selection styles */
+.wp-block-basic-text::selection {
+	background: #0073aa;
+	color: white;
+}
+
+.wp-block-basic-text ::selection {
+	background: #0073aa;
+	color: white;
+}

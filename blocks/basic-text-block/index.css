@@ -1,0 +1,185 @@
+/**
+ * Basic Text Block - Editor Styles
+ * 
+ * These styles are applied only in the block editor
+ * 
+ * @package WPBlockEditorCourse
+ * @since 1.0.0
+ */
+
+/* Block wrapper styles */
+.wp-block-basic-text {
+	position: relative;
+	transition: all 0.3s ease;
+}
+
+/* Editor-specific enhancements */
+.wp-block-basic-text.is-selected {
+	border: 2px dashed #007cba;
+	border-radius: 4px;
+	padding: 8px;
+}
+
+.wp-block-basic-text.is-highlighted {
+	background-color: rgba(0, 124, 186, 0.1);
+}
+
+/* Placeholder styles */
+.wp-block-basic-text .rich-text {
+	min-height: 1.5em;
+}
+
+.wp-block-basic-text .rich-text:empty::before {
+	content: attr(data-placeholder);
+	color: #757575;
+	pointer-events: none;
+	position: absolute;
+}
+
+/* Focus states */
+.wp-block-basic-text .rich-text:focus {
+	outline: none;
+	box-shadow: 0 0 0 1px #007cba;
+	border-radius: 2px;
+}
+
+/* Typography preview in editor */
+.wp-block-basic-text.has-small-font-size {
+	font-size: 13px;
+}
+
+.wp-block-basic-text.has-medium-font-size {
+	font-size: 20px;
+}
+
+.wp-block-basic-text.has-large-font-size {
+	font-size: 36px;
+}
+
+.wp-block-basic-text.has-x-large-font-size {
+	font-size: 42px;
+}
+
+/* Drop cap styles */
+.wp-block-basic-text .rich-text[data-drop-cap="true"]::first-letter {
+	float: left;
+	font-size: 3em;
+	line-height: 0.8;
+	margin: 0.1em 0.1em 0 0;
+	font-weight: bold;
+}
+
+/* Custom class indicator */
+.wp-block-basic-text[class*="custom-"]::before {
+	content: "Custom Class Applied";
+	position: absolute;
+	top: -20px;
+	left: 0;
+	background: #007cba;
+	color: white;
+	font-size: 10px;
+	padding: 2px 6px;
+	border-radius: 2px;
+	opacity: 0.8;
+}
+
+/* Inspector controls styling */
+.components-base-control .components-color-palette {
+	margin-top: 8px;
+}
+
+.components-base-control .components-color-palette__item {
+	margin: 2px;
+}
+
+/* Responsive preview in editor */
+@media (max-width: 768px) {
+	.wp-block-basic-text {
+		font-size: 16px !important; /* Prevent zoom on mobile */
+	}
+}
+
+/* Accessibility improvements for editor */
+.wp-block-basic-text .rich-text[aria-label] {
+	border: 1px solid transparent;
+}
+
+.wp-block-basic-text .rich-text[aria-label]:focus {
+	border-color: #007cba;
+}
+
+/* Loading state */
+.wp-block-basic-text.is-loading {
+	opacity: 0.6;
+	pointer-events: none;
+}
+
+.wp-block-basic-text.is-loading::after {
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 20px;
+	height: 20px;
+	margin: -10px 0 0 -10px;
+	border: 2px solid #f3f3f3;
+	border-top: 2px solid #007cba;
+	border-radius: 50%;
+	animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+	0% { transform: rotate(0deg); }
+	100% { transform: rotate(360deg); }
+}
+
+/* Error state */
+.wp-block-basic-text.has-error {
+	border: 2px solid #d63638;
+	background-color: rgba(214, 54, 56, 0.1);
+}
+
+.wp-block-basic-text.has-error::before {
+	content: "Error: Invalid content";
+	position: absolute;
+	top: -20px;
+	left: 0;
+	background: #d63638;
+	color: white;
+	font-size: 10px;
+	padding: 2px 6px;
+	border-radius: 2px;
+}
+
+/* Success state */
+.wp-block-basic-text.is-valid {
+	border: 2px solid #00a32a;
+	background-color: rgba(0, 163, 42, 0.05);
+}
+
+/* Toolbar positioning */
+.block-editor-block-toolbar .components-toolbar-group {
+	display: flex;
+	align-items: center;
+}
+
+/* Custom controls styling */
+.wp-block-basic-text .components-base-control__field {
+	margin-bottom: 12px;
+}
+
+.wp-block-basic-text .components-base-control__label {
+	font-weight: 600;
+	margin-bottom: 4px;
+}
+
+.wp-block-basic-text .components-base-control__help {
+	font-size: 12px;
+	color: #757575;
+	margin-top: 4px;
+}
+
+/* Animation for smooth transitions */
+.wp-block-basic-text * {
+	transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+}

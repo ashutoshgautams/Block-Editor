@@ -1,0 +1,312 @@
+/**
+ * Interactive Counter Block - Editor Styles
+ * 
+ * These styles are applied only in the block editor
+ * 
+ * @package WPBlockEditorCourse
+ * @since 1.0.0
+ */
+
+/* Block wrapper styles */
+.wp-block-interactive-counter {
+	position: relative;
+	transition: all 0.3s ease;
+	padding: 2rem;
+	border: 2px dashed #007cba;
+	border-radius: 8px;
+	background: #f9f9f9;
+}
+
+/* Editor-specific enhancements */
+.wp-block-interactive-counter.is-selected {
+	border-color: #007cba;
+	background: rgba(0, 124, 186, 0.05);
+}
+
+.wp-block-interactive-counter.is-highlighted {
+	background-color: rgba(0, 124, 186, 0.1);
+}
+
+/* Counter label styles */
+.wp-block-interactive-counter .counter-label {
+	margin: 0 0 1rem 0;
+	font-size: 1.5rem;
+	font-weight: 600;
+	text-align: center;
+}
+
+/* Counter value display */
+.wp-block-interactive-counter .counter-value {
+	font-size: 3rem;
+	font-weight: bold;
+	text-align: center;
+	margin: 1rem 0;
+	padding: 1rem;
+	background: white;
+	border-radius: 8px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	min-height: 4rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+/* Counter controls */
+.wp-block-interactive-counter .counter-controls {
+	display: flex;
+	gap: 0.5rem;
+	justify-content: center;
+	align-items: center;
+	margin-top: 1rem;
+	flex-wrap: wrap;
+}
+
+/* Button styles */
+.wp-block-interactive-counter .counter-button {
+	padding: 0.75rem 1.5rem;
+	border: none;
+	border-radius: 6px;
+	font-size: 1.2rem;
+	font-weight: 600;
+	cursor: pointer;
+	transition: all 0.2s ease;
+	min-width: 3rem;
+	height: 3rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.wp-block-interactive-counter .counter-button:hover {
+	transform: translateY(-2px);
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.wp-block-interactive-counter .counter-button:active {
+	transform: translateY(0);
+}
+
+.wp-block-interactive-counter .counter-button:disabled {
+	opacity: 0.5;
+	cursor: not-allowed;
+	transform: none;
+	box-shadow: none;
+}
+
+/* Button style variations */
+.wp-block-interactive-counter.button-style-default .counter-button {
+	background: #007cba;
+	color: white;
+}
+
+.wp-block-interactive-counter.button-style-rounded .counter-button {
+	border-radius: 50%;
+	width: 3rem;
+	height: 3rem;
+}
+
+.wp-block-interactive-counter.button-style-outlined .counter-button {
+	background: transparent;
+	border: 2px solid #007cba;
+	color: #007cba;
+}
+
+.wp-block-interactive-counter.button-style-minimal .counter-button {
+	background: transparent;
+	color: #007cba;
+	border: none;
+	box-shadow: none;
+}
+
+/* Counter style variations */
+.wp-block-interactive-counter.counter-style-card {
+	background: white;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+	border: none;
+}
+
+.wp-block-interactive-counter.counter-style-minimal {
+	background: transparent;
+	border: none;
+	padding: 1rem;
+}
+
+.wp-block-interactive-counter.counter-style-gradient {
+	background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+	color: white;
+}
+
+/* Animation previews */
+.wp-block-interactive-counter.animation-pulse .counter-value {
+	animation: pulse 2s infinite;
+}
+
+.wp-block-interactive-counter.animation-bounce .counter-value {
+	animation: bounce 1s infinite;
+}
+
+.wp-block-interactive-counter.animation-fade .counter-value {
+	animation: fade 2s infinite;
+}
+
+@keyframes pulse {
+	0%, 100% { transform: scale(1); }
+	50% { transform: scale(1.05); }
+}
+
+@keyframes bounce {
+	0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+	40% { transform: translateY(-10px); }
+	60% { transform: translateY(-5px); }
+}
+
+@keyframes fade {
+	0%, 100% { opacity: 1; }
+	50% { opacity: 0.7; }
+}
+
+/* Editor notice */
+.wp-block-interactive-counter .editor-notice {
+	background: #fff3cd;
+	border: 1px solid #ffeaa7;
+	border-radius: 4px;
+	padding: 0.75rem;
+	margin-top: 1rem;
+	text-align: center;
+	font-size: 0.875rem;
+	color: #856404;
+}
+
+/* Focus states for accessibility */
+.wp-block-interactive-counter .counter-button:focus {
+	outline: 2px solid #007cba;
+	outline-offset: 2px;
+}
+
+/* Responsive design in editor */
+@media (max-width: 768px) {
+	.wp-block-interactive-counter {
+		padding: 1rem;
+	}
+	
+	.wp-block-interactive-counter .counter-value {
+		font-size: 2rem;
+		min-height: 3rem;
+	}
+	
+	.wp-block-interactive-counter .counter-controls {
+		flex-direction: column;
+		gap: 0.25rem;
+	}
+	
+	.wp-block-interactive-counter .counter-button {
+		width: 100%;
+		max-width: 200px;
+	}
+}
+
+/* Loading state */
+.wp-block-interactive-counter.is-loading {
+	opacity: 0.6;
+	pointer-events: none;
+}
+
+.wp-block-interactive-counter.is-loading::after {
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 20px;
+	height: 20px;
+	margin: -10px 0 0 -10px;
+	border: 2px solid #f3f3f3;
+	border-top: 2px solid #007cba;
+	border-radius: 50%;
+	animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+	0% { transform: rotate(0deg); }
+	100% { transform: rotate(360deg); }
+}
+
+/* Error state */
+.wp-block-interactive-counter.has-error {
+	border-color: #d63638;
+	background-color: rgba(214, 54, 56, 0.1);
+}
+
+.wp-block-interactive-counter.has-error::before {
+	content: "Error: Invalid configuration";
+	position: absolute;
+	top: -20px;
+	left: 0;
+	background: #d63638;
+	color: white;
+	font-size: 10px;
+	padding: 2px 6px;
+	border-radius: 2px;
+}
+
+/* Success state */
+.wp-block-interactive-counter.is-valid {
+	border-color: #00a32a;
+	background-color: rgba(0, 163, 42, 0.05);
+}
+
+/* Custom class indicator */
+.wp-block-interactive-counter[class*="custom-"]::before {
+	content: "Custom Class Applied";
+	position: absolute;
+	top: -20px;
+	right: 0;
+	background: #007cba;
+	color: white;
+	font-size: 10px;
+	padding: 2px 6px;
+	border-radius: 2px;
+	opacity: 0.8;
+}
+
+/* Inspector controls styling */
+.components-base-control .components-color-palette {
+	margin-top: 8px;
+}
+
+.components-base-control .components-color-palette__item {
+	margin: 2px;
+}
+
+/* Range control styling */
+.components-range-control .components-range-control__slider {
+	margin: 8px 0;
+}
+
+/* Toggle control styling */
+.components-toggle-control .components-form-toggle {
+	margin-right: 8px;
+}
+
+/* Animation for smooth transitions */
+.wp-block-interactive-counter * {
+	transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+	.wp-block-interactive-counter {
+		border-width: 3px;
+	}
+	
+	.wp-block-interactive-counter .counter-button {
+		border-width: 2px;
+	}
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+	.wp-block-interactive-counter * {
+		animation: none !important;
+		transition: none !important;
+	}
+}

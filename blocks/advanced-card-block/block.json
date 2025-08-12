@@ -1,0 +1,151 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "wp-block-editor-course/advanced-card-block",
+	"version": "1.0.0",
+	"title": "Advanced Card Block",
+	"category": "design",
+	"icon": "index-card",
+	"description": "An advanced card block with InnerBlocks, multiple attributes, and complex styling options.",
+	"example": {
+		"attributes": {
+			"title": "Sample Card Title",
+			"subtitle": "Card subtitle or description",
+			"imageUrl": "",
+			"imageAlt": "",
+			"cardStyle": "default"
+		}
+	},
+	"supports": {
+		"html": false,
+		"anchor": true,
+		"align": ["wide", "full"],
+		"color": {
+			"background": true,
+			"text": true,
+			"gradients": true
+		},
+		"typography": {
+			"fontSize": true,
+			"lineHeight": true,
+			"__experimentalFontFamily": true,
+			"__experimentalFontStyle": true,
+			"__experimentalFontWeight": true,
+			"__experimentalLetterSpacing": true,
+			"__experimentalTextTransform": true,
+			"__experimentalTextDecoration": true
+		},
+		"spacing": {
+			"margin": true,
+			"padding": true,
+			"blockGap": true
+		},
+		"border": {
+			"color": true,
+			"radius": true,
+			"style": true,
+			"width": true
+		},
+		"shadow": true
+	},
+	"attributes": {
+		"title": {
+			"type": "string",
+			"source": "html",
+			"selector": ".card-title",
+			"default": "Card Title"
+		},
+		"subtitle": {
+			"type": "string",
+			"source": "html",
+			"selector": ".card-subtitle",
+			"default": "Card subtitle or description"
+		},
+		"imageUrl": {
+			"type": "string",
+			"source": "attribute",
+			"selector": ".card-image img",
+			"attribute": "src"
+		},
+		"imageAlt": {
+			"type": "string",
+			"source": "attribute",
+			"selector": ".card-image img",
+			"attribute": "alt"
+		},
+		"imageId": {
+			"type": "number"
+		},
+		"cardStyle": {
+			"type": "string",
+			"default": "default"
+		},
+		"showImage": {
+			"type": "boolean",
+			"default": true
+		},
+		"showSubtitle": {
+			"type": "boolean",
+			"default": true
+		},
+		"imagePosition": {
+			"type": "string",
+			"default": "top"
+		},
+		"cardLayout": {
+			"type": "string",
+			"default": "vertical"
+		},
+		"textAlign": {
+			"type": "string",
+			"default": "left"
+		},
+		"titleColor": {
+			"type": "string"
+		},
+		"subtitleColor": {
+			"type": "string"
+		},
+		"backgroundColor": {
+			"type": "string"
+		},
+		"gradient": {
+			"type": "string"
+		},
+		"borderRadius": {
+			"type": "number",
+			"default": 8
+		},
+		"shadow": {
+			"type": "string",
+			"default": "medium"
+		},
+		"hoverEffect": {
+			"type": "string",
+			"default": "lift"
+		},
+		"linkUrl": {
+			"type": "string"
+		},
+		"linkTarget": {
+			"type": "string",
+			"default": "_self"
+		},
+		"rel": {
+			"type": "string"
+		},
+		"style": {
+			"type": "object",
+			"default": {}
+		},
+		"className": {
+			"type": "string",
+			"default": ""
+		}
+	},
+	"textdomain": "wp-block-editor-course",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php"
+}

@@ -1,0 +1,140 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "wp-block-editor-course/interactive-counter-block",
+	"version": "1.0.0",
+	"title": "Interactive Counter Block",
+	"category": "widgets",
+	"icon": "plus-alt",
+	"description": "An interactive counter block demonstrating the WordPress Interactivity API with state management and client-side interactions.",
+	"example": {
+		"attributes": {
+			"initialValue": 0,
+			"step": 1,
+			"minValue": -100,
+			"maxValue": 100,
+			"label": "Counter"
+		}
+	},
+	"supports": {
+		"html": false,
+		"anchor": true,
+		"align": ["left", "center", "right"],
+		"color": {
+			"background": true,
+			"text": true,
+			"gradients": true
+		},
+		"typography": {
+			"fontSize": true,
+			"lineHeight": true,
+			"__experimentalFontFamily": true,
+			"__experimentalFontStyle": true,
+			"__experimentalFontWeight": true,
+			"__experimentalLetterSpacing": true,
+			"__experimentalTextTransform": true,
+			"__experimentalTextDecoration": true
+		},
+		"spacing": {
+			"margin": true,
+			"padding": true,
+			"blockGap": true
+		},
+		"border": {
+			"color": true,
+			"radius": true,
+			"style": true,
+			"width": true
+		},
+		"shadow": true
+	},
+	"attributes": {
+		"initialValue": {
+			"type": "number",
+			"default": 0
+		},
+		"step": {
+			"type": "number",
+			"default": 1
+		},
+		"minValue": {
+			"type": "number",
+			"default": -100
+		},
+		"maxValue": {
+			"type": "number",
+			"default": 100
+		},
+		"label": {
+			"type": "string",
+			"source": "html",
+			"selector": ".counter-label",
+			"default": "Counter"
+		},
+		"showControls": {
+			"type": "boolean",
+			"default": true
+		},
+		"showReset": {
+			"type": "boolean",
+			"default": true
+		},
+		"buttonStyle": {
+			"type": "string",
+			"default": "default"
+		},
+		"counterStyle": {
+			"type": "string",
+			"default": "default"
+		},
+		"textAlign": {
+			"type": "string",
+			"default": "center"
+		},
+		"labelColor": {
+			"type": "string"
+		},
+		"valueColor": {
+			"type": "string"
+		},
+		"buttonColor": {
+			"type": "string"
+		},
+		"backgroundColor": {
+			"type": "string"
+		},
+		"gradient": {
+			"type": "string"
+		},
+		"borderRadius": {
+			"type": "number",
+			"default": 8
+		},
+		"animation": {
+			"type": "string",
+			"default": "none"
+		},
+		"autoIncrement": {
+			"type": "boolean",
+			"default": false
+		},
+		"autoIncrementInterval": {
+			"type": "number",
+			"default": 1000
+		},
+		"style": {
+			"type": "object",
+			"default": {}
+		},
+		"className": {
+			"type": "string",
+			"default": ""
+		}
+	},
+	"textdomain": "wp-block-editor-course",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php",
+	"viewScript": "file:./view.js"
+}

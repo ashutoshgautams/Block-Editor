@@ -1,0 +1,66 @@
+{
+  "name": "wp-block-editor-course",
+  "version": "1.0.0",
+  "description": "WordPress VIP Block Editor Course - Practical Examples",
+  "main": "wp-block-editor-course.php",
+  "scripts": {
+    "build": "wp-scripts build",
+    "dev": "wp-scripts start",
+    "format": "wp-scripts format",
+    "lint:css": "wp-scripts lint-style",
+    "lint:js": "wp-scripts lint-js",
+    "lint:php": "composer run-script lint",
+    "packages-update": "wp-scripts packages-update",
+    "plugin-zip": "wp-scripts plugin-zip",
+    "start": "wp-scripts start",
+    "test:e2e": "wp-scripts test-e2e",
+    "test:unit": "wp-scripts test-unit-js"
+  },
+  "keywords": [
+    "wordpress",
+    "block-editor",
+    "gutenberg",
+    "blocks",
+    "plugin",
+    "development",
+    "course",
+    "examples"
+  ],
+  "author": "Your Name",
+  "license": "GPL-2.0-or-later",
+  "devDependencies": {
+    "@wordpress/scripts": "^26.19.0",
+    "@wordpress/eslint-plugin": "^16.1.0",
+    "@wordpress/prettier-config": "^3.4.0",
+    "eslint": "^8.57.0",
+    "prettier": "^3.2.5",
+    "sass": "^1.71.0"
+  },
+  "dependencies": {
+    "@wordpress/block-editor": "^12.15.0",
+    "@wordpress/blocks": "^12.29.0",
+    "@wordpress/components": "^25.13.0",
+    "@wordpress/compose": "^6.35.0",
+    "@wordpress/data": "^9.4.0",
+    "@wordpress/element": "^5.29.0",
+    "@wordpress/hooks": "^3.47.0",
+    "@wordpress/i18n": "^4.47.0",
+    "@wordpress/interactivity": "^0.1.0",
+    "@wordpress/url": "^3.23.0"
+  },
+  "browserslist": [
+    "extends @wordpress/defaults/browserslist"
+  ],
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/wp-block-editor-course.git"
+  },
+  "bugs": {
+    "url": "https://github.com/your-username/wp-block-editor-course/issues"
+  },
+  "homepage": "https://github.com/your-username/wp-block-editor-course#readme"
+}

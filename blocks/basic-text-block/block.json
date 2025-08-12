@@ -1,0 +1,76 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "wp-block-editor-course/basic-text-block",
+	"version": "1.0.0",
+	"title": "Basic Text Block",
+	"category": "text",
+	"icon": "text",
+	"description": "A simple text block demonstrating basic block development concepts.",
+	"example": {
+		"attributes": {
+			"content": "This is an example of the Basic Text Block. You can edit this content in the block editor."
+		}
+	},
+	"supports": {
+		"html": false,
+		"anchor": true,
+		"color": {
+			"background": true,
+			"text": true,
+			"gradients": true
+		},
+		"typography": {
+			"fontSize": true,
+			"lineHeight": true,
+			"__experimentalFontFamily": true,
+			"__experimentalFontStyle": true,
+			"__experimentalFontWeight": true,
+			"__experimentalLetterSpacing": true,
+			"__experimentalTextTransform": true,
+			"__experimentalTextDecoration": true
+		},
+		"spacing": {
+			"margin": true,
+			"padding": true
+		}
+	},
+	"attributes": {
+		"content": {
+			"type": "string",
+			"source": "html",
+			"selector": "p",
+			"default": "Enter your text here..."
+		},
+		"textAlign": {
+			"type": "string",
+			"default": "left"
+		},
+		"fontSize": {
+			"type": "string",
+			"default": "medium"
+		},
+		"textColor": {
+			"type": "string"
+		},
+		"backgroundColor": {
+			"type": "string"
+		},
+		"gradient": {
+			"type": "string"
+		},
+		"style": {
+			"type": "object",
+			"default": {}
+		},
+		"className": {
+			"type": "string",
+			"default": ""
+		}
+	},
+	"textdomain": "wp-block-editor-course",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php"
+}
